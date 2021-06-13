@@ -22,7 +22,7 @@ public class CommandDao {
       
         try {
         	transObj = sessionObj.beginTransaction();
-          c =sessionObj.createQuery("SELECT p FROM product p", Command.class).getResultList();    
+          c =sessionObj.createQuery("SELECT p FROM command p", Command.class).getResultList();    
            System.out.println("HELLO ME");
           transObj.commit();   
         } catch (RuntimeException e) {
@@ -38,7 +38,7 @@ public class CommandDao {
 	       
 	      
 	        try {transObj = sessionObj.beginTransaction();
-	        Command =sessionObj.createQuery("from Product where id= :ProductId").setParameter("ProductId", CommandId).getResultList();    
+	        Command =sessionObj.createQuery("from command where id= :CommandId").setParameter("CommandId", CommandId).getResultList();    
 	              
 	        } catch (RuntimeException e) {
 	            e.printStackTrace();
@@ -54,7 +54,6 @@ public class CommandDao {
 		      User a =new User();
 		      sessionObj.save(command);
 		      transObj.commit(); 
-            //System.out.println("Admin Record With Id: " + a.getEmail() + " Is Successfully Created In Database");
             System.out.println("Command Record With Id: " + command.getId() + " Is Successfully Created In Database");
 
             FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("createdcommandId",  command.getId());                        
@@ -70,7 +69,7 @@ public class CommandDao {
 		        	transObj = sessionObj.beginTransaction();
 					Product PROId = (Product)sessionObj.load(Product.class, new Integer(delCommandId));
 					sessionObj.delete(PROId);
-					System.out.println("product Record With Id: " +delCommandId+ " Is Successfully Deleted From Database");   
+					System.out.println("command Record With Id: " +delCommandId+ " Is Successfully Deleted From Database");   
 		            // XHTML Response Text
 		            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("deletedCommand Id",  delCommandId);  
 		        } catch (Exception exceptionObj) {

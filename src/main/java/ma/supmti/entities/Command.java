@@ -84,7 +84,7 @@ public class Command implements java.io.Serializable {
 			return dao.findAllCommands();
 	}
 	public String getCommandDetailsById(int id_Command) {
-        System.out.println("Calling getStudentDetailsById() Method Details For Student Id?= " + id_Command);
+        System.out.println("Calling getCommandDetailsById() Method Details For CommandId?= " + id_Command);
         CommandDao ph = new CommandDao();      
         List<Command> CommandList = ph.getCommandById(id_Command);
         for(Command selectedStud : CommandList) {
@@ -93,7 +93,7 @@ public class Command implements java.io.Serializable {
             id = selectedStud.getId();
         }
         this.setId(id);
-        System.out.println("Fetched Id? " + id + " Details Are: Name=" + label + ", Department=" + prix);
+        System.out.println("Fetched Id? " + id + " Details Are: Name=" + label + ", prix=" + prix);
         return "edit";
     }
 

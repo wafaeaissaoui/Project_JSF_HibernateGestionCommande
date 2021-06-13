@@ -75,7 +75,7 @@ public class User implements java.io.Serializable {
 	 
 	
 	 public void saveUserRecord() {
-	        System.out.println("Calling saveStudentRecord() Method To Save Student Record");
+	        System.out.println("Calling saveUserRecord() Method To Save user Record");
 	        UserDao c= new UserDao();
 	        c.addUser(this);
 	    }
@@ -84,7 +84,7 @@ public class User implements java.io.Serializable {
 			return dao.findAllUsers();
 	}
 	 public void delete(int id ) {
-			System.out.println("Calling delete  Method To delete Product Record");
+			System.out.println("Calling delete  Method To delete user Record");
 			UserDao dao = new UserDao();
 			  dao.deleteUser(id);
 		}

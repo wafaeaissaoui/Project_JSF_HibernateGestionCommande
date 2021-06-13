@@ -24,10 +24,8 @@ public class UserDao {
 		      User a =new User();
 		      sessionObj.save(user);
 		      transObj.commit(); 
-            System.out.println("Admin Record With Id: " + a.getEmail() + " Is Successfully Created In Database");
-           // System.out.println("Command Record With Id: " + command.getId() + " Is Successfully Created In Database");
 
-            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("createdcommandId",  user.getId());                        
+            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("createUserId",  user.getId());                        
         } catch (Exception exceptionObj) {
             exceptionObj.printStackTrace();
         } finally {
@@ -39,7 +37,7 @@ public class UserDao {
       
         try {
         	transObj = sessionObj.beginTransaction();
-        	User =sessionObj.createQuery("SELECT p FROM product p", User.class).getResultList();    
+        	User =sessionObj.createQuery("SELECT p FROM user p", User.class).getResultList();    
            System.out.println("HELLO ME");
           transObj.commit();   
         } catch (RuntimeException e) {

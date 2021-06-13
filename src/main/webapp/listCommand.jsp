@@ -10,7 +10,7 @@
 <body>
 <f:view>
 <h:form>
-<h1> list Product </h1>
+<h1> list Commande </h1>
 </h:form>
 <h:dataTable value="#{cm.allCommands}" var="cm">  
 <h:column>  
