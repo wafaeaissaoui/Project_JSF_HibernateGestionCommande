@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="hibernate" dynamic-insert="false" dynamic-update="false" mutable="true" name="ma.supmti.entities.User" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="user">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="name"/>
+        </property>
+        <property generated="never" lazy="false" name="email" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="email"/>
+        </property>
+        <property generated="never" lazy="false" name="tele" optimistic-lock="true" type="string" unique="false">
+            <column length="255" name="tele"/>
+        </property>
+    </class>
+</hibernate-mapping>

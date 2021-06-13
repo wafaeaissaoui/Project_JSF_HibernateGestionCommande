@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://JAVA.sun.com/xml/ns/javaee http://JAVA.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+	<managed-bean>
+		<managed-bean-name>Admin</managed-bean-name>
+		<managed-bean-class>ma.supmti.entities.Admin</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>cm</managed-bean-name>
+		<managed-bean-class>ma.supmti.entities.Command</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>c</managed-bean-name>
+		<managed-bean-class>ma.supmti.entities.User</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>product</managed-bean-name>
+		<managed-bean-class>ma.supmti.entities.Product</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+<navigation-rule>
+
+<display-name>Login</display-name>
+
+<from-view-id>/Login.jsp</from-view-id>
+<navigation-case>
+
+<from-outcome>success</from-outcome>
+
+<to-view-id>/Acceuil.jsp</to-view-id>
+
+</navigation-case>
+
+</navigation-rule>
+
+
+<navigation-rule>
+
+<display-name>Login</display-name>
+
+<from-view-id>/Login.jsp</from-view-id>
+
+
+<navigation-case>
+
+<from-outcome>failed</from-outcome>
+
+<to-view-id>/Login.jsp</to-view-id>
+
+</navigation-case>
+
+</navigation-rule>
+
+
+<navigation-rule>
+
+<display-name>Register</display-name>
+
+<from-view-id>/Register.jsp</from-view-id>
+
+
+<navigation-case>
+
+<from-outcome>login</from-outcome>
+
+<to-view-id>/Login.jsp</to-view-id>
+
+</navigation-case>
+
+</navigation-rule>
+
+
+<navigation-rule>
+
+<display-name>Register</display-name>
+
+<from-view-id>/Register.jsp</from-view-id>
+
+
+<navigation-case>
+
+<from-outcome>register</from-outcome>
+
+<to-view-id>/Register.jsp</to-view-id>
+
+</navigation-case>
+
+</navigation-rule>
+</faces-config>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="hibernate" dynamic-insert="false" dynamic-update="false" mutable="true" name="ma.supmti.entities.Product" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="product">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="label" optimistic-lock="true" type="string" unique="false">
+            <column name="label" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="prix" optimistic-lock="true" type="string" unique="false">
+            <column name="prix"/>
+        </property>
+        <property generated="never" lazy="false" name="categorie" optimistic-lock="true" type="string" unique="false">
+            <column name="categorie"/>
+        </property>
+    </class>
+</hibernate-mapping>
