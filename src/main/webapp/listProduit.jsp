@@ -26,11 +26,11 @@
 <h:outputText value="#{p.categorie}"/>  
 </h:column> 
 <h:column>  
-<h:commandButton  styleClass="btn btn-dark"  value="Update" >  
+<h:commandButton  styleClass="btn btn-dark" action="#{cm.getProductDetailsById(p.id)}" value="Update" >  
 </h:commandButton>  
 </h:column> 
 <h:column>  
-<h:commandButton styleClass="btn btn-danger" value="Delete" >  
+<h:commandButton styleClass="btn btn-danger"  action="#{cm.delete(p.id)}"value="Delete" >  
 </h:commandButton>  
 </h:column> 
 </h:dataTable>

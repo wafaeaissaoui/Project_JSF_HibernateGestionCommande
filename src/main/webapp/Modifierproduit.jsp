@@ -54,7 +54,7 @@ color : white;
             	</div>
             </div>
         </h:panelGrid>
-        <h:outputText id="saveResult" rendered="#{not empty createdStudentId}" value="!!Produit ajouter bien success!!" style="color:red " />
+        <h:outputText id="saveResult" rendered="#{not empty createdProductId}" value="!!Produit modifier bien success!!" style="color:red " />
     </h:form>
     <br /><br />
 </f:view>
